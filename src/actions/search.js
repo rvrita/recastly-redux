@@ -32,20 +32,12 @@ const handleVideoSearch = (q) => {
 
   // Using custom async function with callbacks:
   return (dispatch) => {
-    // dispatch({
-    //   type: SEARCH_IS_LOADING,
-    //   isLoading: true
-    // });
 
     searchYouTube({
       key: YOUTUBE_API_KEY,
       query: q,
       max: 5,
     }, (items) => {
-      // dispatch({ 
-      //   type: SEARCH_IS_LOADING, 
-      //   isLoading: false
-      // });
       dispatch(changeVideoList(items));
     });
   };

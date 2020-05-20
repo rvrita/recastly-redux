@@ -12,9 +12,10 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
         callback(items);
       }
     })
-    .fail(err => {
-      console.error('YouTube API error:', err);
-      callback([]);
+    .fail(({responseJSON}) => {
+      responseJSON.error.errors.forEach((err) =>
+        console.error(err)
+      );
     });
 };
 
