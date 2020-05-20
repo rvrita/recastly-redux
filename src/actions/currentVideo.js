@@ -1,4 +1,4 @@
-const CHANGE_VIDEO = 'CHANGE_VIDEO';
+export const CHANGE_VIDEO = 'CHANGE_VIDEO';
 
 var changeVideo = (video) => ({
   //TODO:  Return some action object to change the currently playing video.
