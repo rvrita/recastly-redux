@@ -9,7 +9,7 @@ import videoList from './videoList.js';
 const rootReducer = combineReducers({
   currentVideo,
   videoList
-})
+});
 
 //HINT: you'll need to combine the other two reducers in this
 //  app into a single reducer using the 'combineReducers' method
